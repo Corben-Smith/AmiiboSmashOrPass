@@ -1,0 +1,196 @@
+:root{
+--primary: #F46036;
+--secondary: #15527A;
+--tertiary: #FCEDF9;
+--background: #F5FFEB;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    background-color: var(--background);
+    color: var(--tertiary);
+    flex-direction: column;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+div.gridcontainer{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+div.main-content {
+    flex: 1; /* Fill the remaining space */
+    display: flex;
+    height: 100%;
+    overflow: hidden; /* Hide overflow of the content */
+    height: 100%; /* Ensure it takes full viewport height */
+}
+
+div.griditem{
+    text-align: center;
+    height: 100%;
+}
+div.griditem-img{
+    display: flex;
+    text-align: center;
+    height: 40vh;
+    margin: 1rem 1rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    object-position: center;
+}
+
+img.amiiboimg{
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+div.popup{
+    width: 100%;
+    height: 100%;
+}
+
+div.historygrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    height: 15rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+div.gridheader{
+    height: 5dvh;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #F46036;
+    flex: 0 0  auto;
+}
+a.headerlink{
+    text-align: center;
+}
+.headerlink:hover{
+    background-color: #15527A;
+}
+.headerlink-center{
+    text-align: center;
+    font-size: 2.5rem;
+    grid-column: 2;
+}
+.headerlink-center:hover{
+    background-color: #15527A;
+}
+
+div.countergrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+p.counter{
+    font-size: 3rem;
+    background-color: #F46036;
+    border-radius: 3rem;
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+}
+
+div.counter-fdiv{
+    font-size: 3rem;
+    background-color: #F46036;
+    border-radius: 3rem;
+    margin: 1rem 2rem;
+    padding: 1rem 5rem;
+    place-content: center;
+    text-align: center;
+}
+
+div.buttonflex{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button.button-smash{
+    flex: 1;
+    background-color: var(--primary); 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4rem;
+    padding: 2rem 8rem;
+}
+.button-smash:hover{
+    background-color: #c74a28; 
+}
+
+button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+button.series{
+    font-size: 2rem;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: #F46036;
+    border-radius: 5rem;
+    width: fit-content;
+    padding: .25rem 1rem;
+    margin: .125rem;
+}
+
+button.button-pass{
+    flex: 1;
+    background-color: var(--secondary); 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4rem;
+    padding: 2rem 8rem;
+}
+.button-pass:hover{
+    background-color:#0a3754; 
+}
+
+div.gridmain{
+    display: grid;
+    grid-template-columns: 1fr 3rf 1fr;
+    grid-template-rows: 1fr 3rf;
+}
+
+div.series{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.series{
+    font-size: 2rem;
+    background-color: #F46036;
+    border-radius: 5rem;
+    width: fit-content;
+    padding: .25rem 1rem;
+}

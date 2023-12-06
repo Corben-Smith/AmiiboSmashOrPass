@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link href="img.png" rel="icon">
+    <title>Document</title>
+</head>
+<body onload="start()">
+    <div class="gridheader">
+        <a class="headerlink-center">SMASH OR PASS AMIIBO EDITION</a>
+    </div>
+    <div class="maincontent">
+        <div class="gridcontainer">
+            <div class="griditem">
+                <div class="series">
+                    <button class="series" onclick="changeSeries('none');">Everything</button>
+                    <button class="series" onclick="changeSeries('The Legend of Zelda');">The Legend of Zelda</button>
+                    <button class="series" onclick="changeSeries('Animal Crossing');">Animal Crossing</button>
+                    <button class="series" onclick="changeSeries('Super Mario');")>Super Mario</button>
+                    <button class="series" onclick="changeSeries('Fire Emblem');")>Fire Emblem</button>
+                </div>
+            </div>
+            <div class="griditem">
+                <p id="name" class="counter">AMIIBONAME</p>
+            </div>
+            <div class="griditem">
+            </div>
+            <div class="griditem">
+                <div class="countergrid">
+                    <p class="counter">SMASH</p>
+                    <div class="counter-fdiv">
+                        <p id="smashField" class="counter-field">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="griditem-img">
+                <img id="img" class="amiiboimg" src="">
+            </div>
+            <div class="griditem">
+                <div class="countergrid">
+                    <p class="counter">PASS</p>
+                    <div class="counter-fdiv">
+                        <p id="passField" class="counter-field">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="griditem">
+                <div class="historygrid">
+                    <img id="smashGrid1" class="amiiboimg">
+                    <img id="smashGrid2" class="amiiboimg">
+                    <img id="smashGrid3" class="amiiboimg">
+                </div>
+            </div>
+            <div class="griditem">
+                <div class="buttonflex">
+                    <div class="button-smash-div">
+                        <button type="button" class="button-smash" onclick="smashClick()">SMASH</button>
+                    </div>
+                    <div>
+                        <button type="button" class="button-pass" onclick="passClick()">PASS</button>
+                    </div>
+                </div>
+            </div>
+            <div class="griditem">
+                <div class="historygrid" class="amiiboimg">
+                    <img id="passGrid1" class="amiiboimg">
+                    <img id="passGrid2" class="amiiboimg">
+                    <img id="passGrid3" class="amiiboimg">
+                </div>
+            </div>
+        </div>
+        <div class="progressx"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
