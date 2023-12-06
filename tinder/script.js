@@ -6,12 +6,11 @@ var amiibo;
 let smashAmiibos = [];
 let passAmiibos = [];
 var selectedSeries = "The Legend of Zelda";
-const rootURL = "https://www.amiiboapi.com/api/amiibo";
+const rootURL = "amiiboapi.json";
 
 
 var xhr = new XMLHttpRequest();
-var xhrcurrent = new XMLHttpRequest();
-
+xhr.overrideMimeType('application/json');
 function start(){
     xhr.open('GET', rootURL, true);
     xhr.send();

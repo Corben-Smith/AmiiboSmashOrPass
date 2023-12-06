@@ -49,33 +49,37 @@ function passClick(){
 }
 
 function updateGrid(condition){
-    let grid = [];
     if(condition !== "wipe"){
+        let grid = [];
         for (let i = 0; i < 3; i++) {
             grid.push(document.getElementById(condition + "Grid" + (i+1)));   
         }
-    }else{
-        for (let i = 0; i < 3; i++) {
-            grid.push(document.getElementById("smashGrid" + (i+1)));   
-        }        
-        for (let i = 0; i < 3; i++) {
-            grid.push(document.getElementById("passGrid" + (i+1)));   
-        }
+
+        let tempindex = 1;
+        grid.forEach(element => {
+            if(condition === "smash"){
+                element.src = smashAmiibos[smashAmiibos.length-tempindex].image;
+            }else{
+                element.src = passAmiibos[passAmiibos.length-tempindex].image;
+            }
+            tempindex++;
+        });
     }
-
-    let tempindex = 1;
-    grid.forEach(element => {
-        if(condition === "wipe"){
-            element.src = undefined;
-        }else if(condition === "pass"){
-            element.src = passAmiibos[passAmiibos.length-tempindex].image;
-        }else{
-            element.src = smashAmiibos[smashAmiibos.length-tempindex].image;
+    else{
+        let smashGrid = [];
+        let passGrid = [];
+        for (let i = 0; i < 3; i++) {
+            smashGrid.push(document.getElementById("smashGrid" + (i+1)));   
+            passGrid.push(document.getElementById("passGrid" + (i+1)));   
         }
+        smashGrid.forEach(element => {
+            element.src = "blank.png";
+        });
         
-        tempindex++;
-    });
-
+        passGrid.forEach(element => {
+            element.src = "blank.png";
+        });
+    }
 }
 
 
@@ -100,14 +104,38 @@ function setMonster(){
 }
 
 function end(){
-
+    
 }
 
 function changeSeries(series){
-    selectedSeries = series;
-    index = 0;
-    smashAmiibos = [];
-    passAmiibos = [];
-    updateGrid("wipe");
-    setMonster();
+    if(series != "none"){
+        var passField = document.getElementById("passField");
+        passField.innerHTML = 0;
+        var smashField = document.getElementById("smashField");
+        smashField.innerHTML = 0;
+
+        selectedSeries = series;
+        index = 0;
+        smashNumber = 0;
+        passNumber = 0;
+        smashAmiibos = [];
+        passAmiibos = [];
+        updateGrid("wipe");
+        setMonster();
+    }
+    else{
+        var passField = document.getElementById("passField");
+        passField.innerHTML = 0;
+        var smashField = document.getElementById("smashField");
+        smashField.innerHTML = 0;
+
+        selectedSeries = "none";
+        index = 0;
+        smashNumber = 0;
+        passNumber = 0;
+        smashAmiibos = [];
+        passAmiibos = [];
+        updateGrid("wipe");
+        setMonster();
+    }
 }
